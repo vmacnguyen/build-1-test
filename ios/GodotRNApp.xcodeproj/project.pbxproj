@@ -12,21 +12,21 @@
 		2D20793FB5195D13D6A225EF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4813410B7FCC4EB907B01C43 /* PrivacyInfo.xcprivacy */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		668C9BD22EF63FD7000B7BF3 /* BUILD-1.pck in Resources */ = {isa = PBXBuildFile; fileRef = 668C9BD12EF63FD7000B7BF3 /* BUILD-1.pck */; };
-		668C9C202EF64189000B7BF3 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C9BDD2EF64154000B7BF3 /* MoltenVK.xcframework */; };
-		668C9C212EF64189000B7BF3 /* MoltenVK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 668C9BDD2EF64154000B7BF3 /* MoltenVK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		668C9C242EF6479F000B7BF3 /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C9C232EF6479F000B7BF3 /* MoltenVK.xcframework */; };
+		668C9C252EF6479F000B7BF3 /* MoltenVK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 668C9C232EF6479F000B7BF3 /* MoltenVK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB13E363A5933EEF4CBCB13A /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5ADDD98D901BD28E0995E /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		668C9C222EF64189000B7BF3 /* Embed Frameworks */ = {
+		668C9C262EF6479F000B7BF3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				668C9C212EF64189000B7BF3 /* MoltenVK.xcframework in Embed Frameworks */,
+				668C9C252EF6479F000B7BF3 /* MoltenVK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +107,7 @@
 		668C9C1A2EF64154000B7BF3 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MoltenVK.xcframework; sourceTree = "<group>"; };
 		668C9C1C2EF64154000B7BF3 /* dylib */ = {isa = PBXFileReference; lastKnownFileType = text; path = dylib; sourceTree = "<group>"; };
 		668C9C1E2EF64154000B7BF3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		668C9C232EF6479F000B7BF3 /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MoltenVK.xcframework; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = GodotRNApp/SplashScreen.storyboard; sourceTree = "<group>"; };
 		B04022025D85B1D81D8B47F8 /* libPods-GodotRNApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GodotRNApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
@@ -122,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2345D1164A3309CC7920256C /* libPods-GodotRNApp.a in Frameworks */,
-				668C9C202EF64189000B7BF3 /* MoltenVK.xcframework in Frameworks */,
+				668C9C242EF6479F000B7BF3 /* MoltenVK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +165,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				668C9C232EF6479F000B7BF3 /* MoltenVK.xcframework */,
 				668C9C1F2EF64154000B7BF3 /* MoltenVK 2 */,
 				668C9BCC2EF63ED7000B7BF3 /* MoltenVK.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
@@ -395,7 +397,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
 				7D110F98D47608627C4BEBBD /* [CP] Embed Pods Frameworks */,
-				668C9C222EF64189000B7BF3 /* Embed Frameworks */,
+				668C9C262EF6479F000B7BF3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
