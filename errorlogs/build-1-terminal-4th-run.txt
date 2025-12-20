@@ -1,0 +1,26 @@
+Last login: Fri Dec 19 21:12:24 on ttys020
+vivienmacnguyen@Mac ~ % cd Documents
+vivienmacnguyen@Mac Documents % cd Build-1-project
+vivienmacnguyen@Mac Build-1-project % cd GodotRNApp
+vivienmacnguyen@Mac GodotRNApp % ls
+app			hooks			package.json
+app.json		icon.svg		project.binary
+assets			icon.svg.import		README.md
+components		ios			Scenes
+constants		Models			scripts
+errorlogs		node_modules		tsconfig.json
+eslint.config.js	package-lock.json
+vivienmacnguyen@Mac GodotRNApp % npx expo run:ios
+› Planning build
+    Run script build phase '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'hermes-engine' from project 'Pods')
+❌  GodotRNApp/GodotRNApp: While building for iOS Simulator, no library for this platform was found in '/Users/vivienmacnguyen/Downloads/MoltenVK/MoltenVK/static/MoltenVK.xcframework'.
+   └─/Users/vivienmacnguyen/Downloads/MoltenVK/MoltenVK/static/MoltenVK.xcframework
+❌  GodotRNApp/GodotRNApp: While building for iOS Simulator, no library for this platform was found in '/Users/vivienmacnguyen/Downloads/MoltenVK/MoltenVK/static/MoltenVK.xcframework'.
+   └─/Users/vivienmacnguyen/Downloads/MoltenVK/MoltenVK/static/MoltenVK.xcframework
+
+› 2 error(s), and 1 warning(s)
+
+CommandError: Failed to build iOS project. "xcodebuild" exited with error code 65.
+vivienmacnguyen@Mac GodotRNApp % 
+
+

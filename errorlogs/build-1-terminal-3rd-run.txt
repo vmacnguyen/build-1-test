@@ -1,0 +1,34 @@
+Last login: Fri Dec 19 20:51:25 on ttys020
+vivienmacnguyen@Mac ~ % ls
+Desktop		Downloads	Movies		Pictures
+Documents	Library		Music		Public
+vivienmacnguyen@Mac ~ % cd Documents
+vivienmacnguyen@Mac Documents % ls
+BUILD-1-PROJECT		Prac-This		Stephen Float Serve.mov
+Build-1-Terminal	practice-app-forreal
+vivienmacnguyen@Mac Documents % cd Build-1-project
+vivienmacnguyen@Mac Build-1-project % ls
+BUILD-1.pck		GodotRNApp
+BUILD-1.zip		package-lock.json
+vivienmacnguyen@Mac Build-1-project % cd GodotRNApp
+vivienmacnguyen@Mac GodotRNApp % npx expo run:ios
+  CocoaPods CLI not found in your PATH, installing it now.
+› Attempting to install CocoaPods CLI with Gem
+Fetching concurrent-ruby-1.3.6.gem
+Fetching connection_pool-3.0.2.gem
+› Failed to install CocoaPods CLI with Gem
+Failed to install CocoaPods CLI with gem (recommended)
+└─ Cause: gem install cocoapods --no-document exited with non-zero code: 1
+› Attempting to install CocoaPods CLI with Homebrew
+✔︎ JSON API cask.jws.json                           [Downloaded   14.7MB/ 14.7MB]
+✔︎ JSON API formula.jws.json                        [Downloaded   32.1MB/ 32.1MB]
+To relink, run:
+  brew unlink cocoapods && brew link cocoapods
+› Failed to install CocoaPods with Homebrew. Install CocoaPods CLI and try again: https://cocoapods.org/
+⚠️  Unable to install the CocoaPods CLI.
+Failed to install CocoaPods with Homebrew. Install CocoaPods CLI and try again: https://cocoapods.org/
+└─ Cause: Homebrew installation appeared to succeed but CocoaPods CLI not found in PATH and unable to link.
+└─ Cause: CLI could not be installed automatically with gem or Homebrew, please install CocoaPods manually and try again
+└─ Cause: Failed to install CocoaPods CLI with gem (recommended)
+└─ Cause: gem install cocoapods --no-document exited with non-zero code: 1
+vivienmacnguyen@Mac GodotRNApp % 
