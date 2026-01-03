@@ -1,0 +1,646 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -------------------------------------\
+Translated Report (Full Report Below)\
+-------------------------------------\
+Process:             GodotRNApp [90337]\
+Path:                /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/GodotRNApp\
+Identifier:          com.coolstring1.GodotRNApp\
+Version:             1.0.0 (1)\
+Code Type:           ARM-64 (Native)\
+Role:                Foreground\
+Parent Process:      launchd_sim [79206]\
+Coalition:           com.apple.CoreSimulator.SimDevice.E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2 [19410]\
+Responsible Process: SimulatorTrampoline [78487]\
+User ID:             501\
+\
+Date/Time:           2026-01-02 20:27:15.9962 -0500\
+Launch Time:         2026-01-02 20:26:48.2406 -0500\
+Hardware Model:      Mac16,12\
+OS Version:          macOS 26.1 (25B78)\
+Release Type:        User\
+\
+Crash Reporter Key:  57CF16AC-2A7F-DD50-E2F4-A5DD238E089D\
+Incident Identifier: 10C421FD-7CF4-4450-BD09-347747BAEB7D\
+\
+Sleep/Wake UUID:       D17AEEF5-9F47-4179-A29F-A4FDDD3CB209\
+\
+Time Awake Since Boot: 310000 seconds\
+Time Since Wake:       6510 seconds\
+\
+System Integrity Protection: enabled\
+\
+Triggered by Thread: 0, Dispatch Queue: com.apple.main-thread\
+\
+Exception Type:    EXC_BAD_ACCESS (SIGSEGV)\
+Exception Subtype: KERN_INVALID_ADDRESS at 0x0000000000000000\
+Exception Codes:   0x0000000000000001, 0x0000000000000000\
+\
+Termination Reason:  Namespace SIGNAL, Code 11, Segmentation fault: 11\
+Terminating Process: exc handler [90337]\
+\
+\
+VM Region Info: 0 is not in any region.  Bytes before following region: 4307779584\
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL\
+      UNUSED SPACE AT START\
+--->  \
+      __TEXT                      100c38000-100c3c000    [   16K] r-x/r-x SM=COW  /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/GodotRNApp\
+\
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread\
+0   ???                           	               0x0 ???\
+1   GodotRNApp.debug.dylib        	       0x108da2bd4 godot::RenderingNativeSurfaceApple::get_class_static() + 88\
+2   GodotRNApp.debug.dylib        	       0x108db74c4 godot::RenderingNativeSurfaceApple::create(unsigned long long) + 184\
+3   GodotRNApp.debug.dylib        	       0x108d9f1e0 GetGodotInstance() + 632\
+4   GodotRNApp.debug.dylib        	       0x108da3c24 __41-[GodotManager initWithBridge:jsInvoker:]_block_invoke + 44\
+5   GodotRNApp.debug.dylib        	       0x107fc8db0 decltype(std::declval<void () block_pointer __strong&>()()) std::__1::__invoke[abi:de200100]<void () block_pointer __strong&>(&&, decltype(std::declval<void () block_pointer __strong&>()())&&...) + 32 (invoke.h:179)\
+6   GodotRNApp.debug.dylib        	       0x107fc8c50 std::__1::__function::__func<void () block_pointer __strong, std::__1::allocator<std::__1::allocator>, void ()>::operator()() + 28 (function.h:809)\
+7   libdispatch.dylib             	       0x1801c07a8 _dispatch_call_block_and_release + 24\
+8   libdispatch.dylib             	       0x1801db4b0 _dispatch_client_callout + 12\
+9   libdispatch.dylib             	       0x1801f74a0 <deduplicated_symbol> + 24\
+10  libdispatch.dylib             	       0x1801d031c _dispatch_main_queue_drain + 1184\
+11  libdispatch.dylib             	       0x1801cfe6c _dispatch_main_queue_callback_4CF + 40\
+12  CoreFoundation                	       0x180455ed8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 12\
+13  CoreFoundation                	       0x1804550b0 __CFRunLoopRun + 1884\
+14  CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+15  GraphicsServices              	       0x1926be9bc GSEventRunModal + 116\
+16  UIKitCore                     	       0x18630f0d8 -[UIApplication _run] + 772\
+17  UIKitCore                     	       0x186313300 UIApplicationMain + 124\
+18  GodotRNApp.debug.dylib        	       0x107eb8e48 __debug_main_executable_dylib_entry_point + 64 (AppDelegate.swift:6)\
+19  ???                           	       0x100ce93d0 ???\
+20  dyld                          	       0x100eb8d54 start + 7184\
+\
+Thread 1:\
+\
+Thread 2:\
+\
+Thread 3::  Dispatch queue: com.apple.FramePacing.ConfigurationCheckingQueue\
+0   Foundation                    	       0x181120a80 +[NSUserDefaults(NSUserDefaults) standardUserDefaults] + 0\
+1   FramePacing                   	       0x22f3ab090 ___FPCheckEnvironmentVariablesAndDefaultsForConfiguration_block_invoke + 288\
+2   libdispatch.dylib             	       0x1801c07a8 _dispatch_call_block_and_release + 24\
+3   libdispatch.dylib             	       0x1801db4b0 _dispatch_client_callout + 12\
+4   libdispatch.dylib             	       0x1801c9c28 _dispatch_lane_serial_drain + 984\
+5   libdispatch.dylib             	       0x1801ca6e8 _dispatch_lane_invoke + 396\
+6   libdispatch.dylib             	       0x1801d5534 _dispatch_root_queue_drain_deferred_wlh + 288\
+7   libdispatch.dylib             	       0x1801d4c74 _dispatch_workloop_worker_thread + 692\
+8   libsystem_pthread.dylib       	       0x100c52b8c _pthread_wqthread + 288\
+9   libsystem_pthread.dylib       	       0x100c5198c start_wqthread + 8\
+\
+Thread 4:: com.apple.uikit.eventfetch-thread\
+0   libsystem_kernel.dylib        	       0x100da4b70 mach_msg2_trap + 8\
+1   libsystem_kernel.dylib        	       0x100db590c mach_msg2_internal + 72\
+2   libsystem_kernel.dylib        	       0x100dacc10 mach_msg_overwrite + 480\
+3   libsystem_kernel.dylib        	       0x100da4ee4 mach_msg + 20\
+4   CoreFoundation                	       0x180455c04 __CFRunLoopServiceMachPort + 156\
+5   CoreFoundation                	       0x180454dbc __CFRunLoopRun + 1128\
+6   CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+7   Foundation                    	       0x1810e5408 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 208\
+8   Foundation                    	       0x1810e5628 -[NSRunLoop(NSRunLoop) runUntilDate:] + 60\
+9   UIKitCore                     	       0x186067690 -[UIEventFetcher threadMain] + 392\
+10  Foundation                    	       0x18110c2d4 __NSThread__start__ + 716\
+11  libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+12  libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 5:\
+\
+Thread 6:\
+\
+Thread 7:: com.facebook.react.JavaScript\
+0   hermes                        	       0x10191be04 hermes::Function::getContext() const + 4\
+1   hermes                        	       0x1018bb87c hermes::hbc::HBCISel::generate(hermes::Instruction*, hermes::BasicBlock*) + 40\
+2   hermes                        	       0x1018bb5f4 hermes::hbc::HBCISel::generate(hermes::BasicBlock*, hermes::BasicBlock*) + 620\
+3   hermes                        	       0x1018bc680 hermes::hbc::HBCISel::generate(hermes::SourceMapGenerator*) + 1392\
+4   hermes                        	       0x10187dfb8 hermes::hbc::generateBytecodeModule(hermes::Module*, hermes::Function*, hermes::Function*, hermes::BytecodeGenerationOptions const&, hermes::OptValue<unsigned int>, hermes::SourceMapGenerator*, std::__1::unique_ptr<hermes::hbc::BCProviderBase, std::__1::default_delete<hermes::hbc::BCProviderBase>>) + 16272\
+5   hermes                        	       0x10173149c hermes::vm::CodeBlock::lazyCompileImpl(hermes::vm::Runtime&) + 232\
+6   hermes                        	       0x101749e98 hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&) + 2500\
+7   hermes                        	       0x1017494a0 hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) + 132\
+8   hermes                        	       0x10172fe2c hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&) + 40\
+9   hermes                        	       0x10172d82c hermes::vm::Callable::executeCall0(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, bool) + 176\
+10  hermes                        	       0x101760298 hermes::vm::JSObject::getComputedWithReceiver_RJS(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>) + 612\
+11  hermes                        	       0x10174bbfc hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&) + 10024\
+12  hermes                        	       0x1017494a0 hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) + 132\
+13  hermes                        	       0x10172fe2c hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&) + 40\
+14  hermes                        	       0x10172f63c hermes::vm::BoundFunction::_boundCall(hermes::vm::BoundFunction*, hermes::inst::Inst const*, hermes::vm::Runtime&) + 504\
+15  hermes                        	       0x101749e00 hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&) + 2348\
+16  hermes                        	       0x1017494a0 hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) + 132\
+17  hermes                        	       0x10172fe2c hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&) + 40\
+18  hermes                        	       0x10172e2a4 hermes::vm::Callable::executeCall(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::JSObject>) + 1344\
+19  hermes                        	       0x1017ed9b8 hermes::vm::functionPrototypeApply(void*, hermes::vm::Runtime&, hermes::vm::NativeArgs) + 320\
+20  hermes                        	       0x10172fb58 hermes::vm::NativeFunction::_nativeCall(hermes::vm::NativeFunction*, hermes::vm::Runtime&) + 144\
+21  hermes                        	       0x101749de4 hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&) + 2320\
+22  hermes                        	       0x1017494a0 hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) + 132\
+23  hermes                        	       0x10172fe2c hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&) + 40\
+24  hermes                        	       0x10172f63c hermes::vm::BoundFunction::_boundCall(hermes::vm::BoundFunction*, hermes::inst::Inst const*, hermes::vm::Runtime&) + 504\
+25  hermes                        	       0x10166b398 facebook::hermes::(anonymous namespace)::HermesRuntimeImpl::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long) + 748\
+26  GodotRNApp.debug.dylib        	       0x108240af8 facebook::jsi::RuntimeDecorator<facebook::jsi::Runtime, facebook::jsi::Runtime>::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long) + 76 (decorator.h:393)\
+27  GodotRNApp.debug.dylib        	       0x108a3cd60 facebook::jsi::WithRuntimeDecorator<facebook::react::(anonymous namespace)::ReentrancyCheck, facebook::jsi::Runtime, facebook::jsi::Runtime>::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long) + 88 (decorator.h:933)\
+28  GodotRNApp.debug.dylib        	       0x107fb493c facebook::jsi::Function::call(facebook::jsi::Runtime&, facebook::jsi::Value const*, unsigned long) const + 100 (jsi-inl.h:282)\
+29  GodotRNApp.debug.dylib        	       0x107fb488c facebook::jsi::Function::call(facebook::jsi::Runtime&, std::initializer_list<facebook::jsi::Value>) const + 112 (jsi-inl.h:287)\
+30  GodotRNApp.debug.dylib        	       0x108a78c0c facebook::jsi::Value facebook::jsi::Function::call<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, facebook::jsi::Value>(facebook::jsi::Runtime&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, facebook::jsi::Value&&) const + 224 (jsi-inl.h:295)\
+31  GodotRNApp.debug.dylib        	       0x108a78ad8 facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0::operator()() const + 140 (JSIExecutor.cpp:241)\
+32  GodotRNApp.debug.dylib        	       0x108a78a40 decltype(std::declval<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&) + 24 (invoke.h:179)\
+33  GodotRNApp.debug.dylib        	       0x108a78a1c void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&) + 24 (invoke.h:251)\
+34  GodotRNApp.debug.dylib        	       0x108a789f8 void std::__1::__invoke_r[abi:de200100]<void, facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&) + 24 (invoke.h:273)\
+35  GodotRNApp.debug.dylib        	       0x108a789d4 std::__1::__function::__alloc_func<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0, std::__1::allocator<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0>, void ()>::operator()[abi:de200100]() + 24 (function.h:167)\
+36  GodotRNApp.debug.dylib        	       0x108a7831c std::__1::__function::__func<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0, std::__1::allocator<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0>, void ()>::operator()() + 28 (function.h:319)\
+37  GodotRNApp.debug.dylib        	       0x107fd2d58 std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const + 60 (function.h:436)\
+38  GodotRNApp.debug.dylib        	       0x107fd2d10 std::__1::function<void ()>::operator()() const + 24 (function.h:995)\
+39  GodotRNApp.debug.dylib        	       0x10835af5c facebook::react::JSIExecutor::defaultTimeoutInvoker(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>) + 28 (JSIExecutor.h:108)\
+40  GodotRNApp.debug.dylib        	       0x10835bf08 decltype(std::declval<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>()(std::declval<std::__1::function<void ()> const&>(), std::declval<std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>())) std::__1::__invoke[abi:de200100]<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) + 92 (invoke.h:179)\
+41  GodotRNApp.debug.dylib        	       0x10835bea0 void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) + 40 (invoke.h:251)\
+42  GodotRNApp.debug.dylib        	       0x10835be6c void std::__1::__invoke_r[abi:de200100]<void, void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) + 40 (invoke.h:273)\
+43  GodotRNApp.debug.dylib        	       0x10835be38 std::__1::__function::__alloc_func<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::allocator<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>, void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()[abi:de200100](std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) + 40 (function.h:167)\
+44  GodotRNApp.debug.dylib        	       0x10835b658 std::__1::__function::__func<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::allocator<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>, void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) + 44 (function.h:319)\
+45  GodotRNApp.debug.dylib        	       0x108a77aa8 std::__1::__function::__value_func<void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()[abi:de200100](std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) const + 76 (function.h:436)\
+46  GodotRNApp.debug.dylib        	       0x108a6e3c4 std::__1::function<void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>) const + 40 (function.h:995)\
+47  GodotRNApp.debug.dylib        	       0x108a6dff4 facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&) + 316 (JSIExecutor.cpp:239)\
+48  GodotRNApp.debug.dylib        	       0x108a072cc facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0::operator()(facebook::react::JSExecutor*) const + 636 (NativeToJsBridge.cpp:205)\
+49  GodotRNApp.debug.dylib        	       0x108a07044 decltype(std::declval<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&>()(std::declval<facebook::react::JSExecutor*>())) std::__1::__invoke[abi:de200100]<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&) + 36 (invoke.h:179)\
+50  GodotRNApp.debug.dylib        	       0x108a07014 void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&) + 32 (invoke.h:251)\
+51  GodotRNApp.debug.dylib        	       0x108a06fe8 void std::__1::__invoke_r[abi:de200100]<void, facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&) + 32 (invoke.h:273)\
+52  GodotRNApp.debug.dylib        	       0x108a06fbc std::__1::__function::__alloc_func<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0>, void (facebook::react::JSExecutor*)>::operator()[abi:de200100](facebook::react::JSExecutor*&&) + 32 (function.h:167)\
+53  GodotRNApp.debug.dylib        	       0x108a06638 std::__1::__function::__func<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0>, void (facebook::react::JSExecutor*)>::operator()(facebook::react::JSExecutor*&&) + 36 (function.h:319)\
+54  GodotRNApp.debug.dylib        	       0x108a0de54 std::__1::__function::__value_func<void (facebook::react::JSExecutor*)>::operator()[abi:de200100](facebook::react::JSExecutor*&&) const + 68 (function.h:436)\
+55  GodotRNApp.debug.dylib        	       0x108a0ddec std::__1::function<void (facebook::react::JSExecutor*)>::operator()(facebook::react::JSExecutor*) const + 36 (function.h:995)\
+56  GodotRNApp.debug.dylib        	       0x108a0ddb8 facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0::operator()() const + 92 (NativeToJsBridge.cpp:306)\
+57  GodotRNApp.debug.dylib        	       0x108a0dd50 decltype(std::declval<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&) + 24 (invoke.h:179)\
+58  GodotRNApp.debug.dylib        	       0x108a0dd2c void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&) + 24 (invoke.h:251)\
+59  GodotRNApp.debug.dylib        	       0x108a0dd08 void std::__1::__invoke_r[abi:de200100]<void, facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&) + 24 (invoke.h:273)\
+60  GodotRNApp.debug.dylib        	       0x108a0dce4 std::__1::__function::__alloc_func<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0>, void ()>::operator()[abi:de200100]() + 24 (function.h:167)\
+61  GodotRNApp.debug.dylib        	       0x108a0d2a8 std::__1::__function::__func<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0>, void ()>::operator()() + 28 (function.h:319)\
+62  GodotRNApp.debug.dylib        	       0x107fd2d58 std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const + 60 (function.h:436)\
+63  GodotRNApp.debug.dylib        	       0x107fd2d10 std::__1::function<void ()>::operator()() const + 24 (function.h:995)\
+64  GodotRNApp.debug.dylib        	       0x10836b798 facebook::react::tryAndReturnError(std::__1::function<void ()> const&) + 24 (RCTCxxUtils.mm:76)\
+65  GodotRNApp.debug.dylib        	       0x108392704 facebook::react::RCTMessageThread::tryFunc(std::__1::function<void ()> const&) + 36 (RCTMessageThread.mm:68)\
+66  GodotRNApp.debug.dylib        	       0x108395d0c facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0::operator()() const + 80 (RCTMessageThread.mm:81)\
+67  GodotRNApp.debug.dylib        	       0x108395cb0 decltype(std::declval<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&) + 24 (invoke.h:179)\
+68  GodotRNApp.debug.dylib        	       0x108395c8c void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&) + 24 (invoke.h:251)\
+69  GodotRNApp.debug.dylib        	       0x108395c68 void std::__1::__invoke_r[abi:de200100]<void, facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&) + 24 (invoke.h:273)\
+70  GodotRNApp.debug.dylib        	       0x108395c44 std::__1::__function::__alloc_func<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0, std::__1::allocator<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0>, void ()>::operator()[abi:de200100]() + 24 (function.h:167)\
+71  GodotRNApp.debug.dylib        	       0x10839537c std::__1::__function::__func<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0, std::__1::allocator<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0>, void ()>::operator()() + 28 (function.h:319)\
+72  GodotRNApp.debug.dylib        	       0x107fd2d58 std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const + 60 (function.h:436)\
+73  GodotRNApp.debug.dylib        	       0x107fd2d10 std::__1::function<void ()>::operator()() const + 24 (function.h:995)\
+74  GodotRNApp.debug.dylib        	       0x1083924a4 invocation function for block in facebook::react::RCTMessageThread::runAsync(std::__1::function<void ()>) + 48 (RCTMessageThread.mm:44)\
+75  CoreFoundation                	       0x180456170 __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 20\
+76  CoreFoundation                	       0x1804558f8 __CFRunLoopDoBlocks + 340\
+77  CoreFoundation                	       0x180454c3c __CFRunLoopRun + 744\
+78  CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+79  GodotRNApp.debug.dylib        	       0x10834790c +[RCTCxxBridge runRunLoop] + 772 (RCTCxxBridge.mm:378)\
+80  Foundation                    	       0x18110c2d4 __NSThread__start__ + 716\
+81  libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+82  libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 8:: hades\
+0   libsystem_kernel.dylib        	       0x100da8020 __psynch_cvwait + 8\
+1   libsystem_pthread.dylib       	       0x100c56a74 _pthread_cond_wait + 976\
+2   libc++.1.dylib                	       0x18033570c std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28\
+3   hermes                        	       0x1018130dc hermes::vm::HadesGC::Executor::worker() + 112\
+4   hermes                        	       0x101813040 void* std::__1::__thread_proxy[abi:nn180100]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, hermes::vm::HadesGC::Executor::Executor()::'lambda'()>>(void*) + 44\
+5   libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+6   libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 9:: com.apple.CFStream.LegacyThread\
+0   libsystem_kernel.dylib        	       0x100da4b70 mach_msg2_trap + 8\
+1   libsystem_kernel.dylib        	       0x100db590c mach_msg2_internal + 72\
+2   libsystem_kernel.dylib        	       0x100dacc10 mach_msg_overwrite + 480\
+3   libsystem_kernel.dylib        	       0x100da4ee4 mach_msg + 20\
+4   CoreFoundation                	       0x180455c04 __CFRunLoopServiceMachPort + 156\
+5   CoreFoundation                	       0x180454dbc __CFRunLoopRun + 1128\
+6   CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+7   CoreFoundation                	       0x180474184 _legacyStreamRunLoop_workThread + 260\
+8   libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+9   libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 10:\
+\
+Thread 11:: com.facebook.SocketRocket.NetworkThread\
+0   libsystem_kernel.dylib        	       0x100da4b70 mach_msg2_trap + 8\
+1   libsystem_kernel.dylib        	       0x100db590c mach_msg2_internal + 72\
+2   libsystem_kernel.dylib        	       0x100dacc10 mach_msg_overwrite + 480\
+3   libsystem_kernel.dylib        	       0x100da4ee4 mach_msg + 20\
+4   CoreFoundation                	       0x180455c04 __CFRunLoopServiceMachPort + 156\
+5   CoreFoundation                	       0x180454dbc __CFRunLoopRun + 1128\
+6   CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+7   Foundation                    	       0x1810e5408 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 208\
+8   GodotRNApp.debug.dylib        	       0x108bee0b8 -[SRRunLoopThread main] + 268 (SRRunLoopThread.m:71)\
+9   Foundation                    	       0x18110c2d4 __NSThread__start__ + 716\
+10  libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+11  libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 12:: com.apple.NSURLConnectionLoader\
+0   libsystem_kernel.dylib        	       0x100da4b70 mach_msg2_trap + 8\
+1   libsystem_kernel.dylib        	       0x100db590c mach_msg2_internal + 72\
+2   libsystem_kernel.dylib        	       0x100dacc10 mach_msg_overwrite + 480\
+3   libsystem_kernel.dylib        	       0x100da4ee4 mach_msg + 20\
+4   CoreFoundation                	       0x180455c04 __CFRunLoopServiceMachPort + 156\
+5   CoreFoundation                	       0x180454dbc __CFRunLoopRun + 1128\
+6   CoreFoundation                	       0x18044fcec _CFRunLoopRunSpecificWithOptions + 496\
+7   CFNetwork                     	       0x184e9dc70 +[__CFN_CoreSchedulingSetRunnable _run:] + 368\
+8   Foundation                    	       0x18110c2d4 __NSThread__start__ + 716\
+9   libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+10  libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 13:: com.apple.CFSocket.private\
+0   libsystem_kernel.dylib        	       0x100daef80 __select + 8\
+1   CoreFoundation                	       0x1804648ac __CFSocketManager + 680\
+2   libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+3   libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+Thread 14:: hades\
+0   libsystem_kernel.dylib        	       0x100da8020 __psynch_cvwait + 8\
+1   libsystem_pthread.dylib       	       0x100c56a74 _pthread_cond_wait + 976\
+2   libc++.1.dylib                	       0x18033570c std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28\
+3   hermes                        	       0x1018130dc hermes::vm::HadesGC::Executor::worker() + 112\
+4   hermes                        	       0x101813040 void* std::__1::__thread_proxy[abi:nn180100]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, hermes::vm::HadesGC::Executor::Executor()::'lambda'()>>(void*) + 44\
+5   libsystem_pthread.dylib       	       0x100c565ac _pthread_start + 104\
+6   libsystem_pthread.dylib       	       0x100c51998 thread_start + 8\
+\
+\
+Thread 0 crashed with ARM Thread State (64-bit):\
+    x0: 0x000000010bcb5070   x1: 0x000000010b784d19   x2: 0x0000000000000000   x3: 0x0000000000000001\
+    x4: 0x0000000000000009   x5: 0x0000000000000000   x6: 0x0000000000000050   x7: 0x0000000000000403\
+    x8: 0x0000000000000000   x9: 0x0000000000000002  x10: 0x0000000000000000  x11: 0x0000000000000002\
+   x12: 0x0000000000000000  x13: 0x0000000000000000  x14: 0x00000001f2d7bb28  x15: 0x00000001f2d7bb28\
+   x16: 0x0000000100c51718  x17: 0x000000018013eb24  x18: 0x0000000000000000  x19: 0x000000010bcb5070\
+   x20: 0x000000010bda7000  x21: 0x0000000000000000  x22: 0x000060000260c0c0  x23: 0x00000001f2d7a0c0\
+   x24: 0x00000001f2d7a0c0  x25: 0x00006000039e4d00  x26: 0x000000010bda7000  x27: 0x0000000000000000\
+   x28: 0x0000000000000114   fp: 0x000000016f1c49c0   lr: 0x0000000108dc550c\
+    sp: 0x000000016f1c49b0   pc: 0x0000000000000000 cpsr: 0x60000800\
+   far: 0x0000000000000000  esr: 0x82000006 (Instruction Abort) Translation fault\
+\
+Binary Images:\
+       0x100eb0000 -        0x100f4ffff dyld (*) <b50f5a1a-be81-3068-92e1-3554f2be478a> /usr/lib/dyld\
+       0x100c38000 -        0x100c3bfff com.coolstring1.GodotRNApp (1.0.0) <c1d0639d-f0e8-3c68-bd8c-bdf6e58344e0> /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/GodotRNApp\
+       0x107eb4000 -        0x10ba7ffff GodotRNApp.debug.dylib (*) <b7d8d1e4-90f4-35b1-b1c2-4bcdbe764bcd> /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/GodotRNApp.debug.dylib\
+       0x101660000 -        0x1019e7fff dev.hermesengine.iphonesimulator (0.12.0) <944bd49b-ad2e-3e3c-96ac-0603909fdd97> /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/Frameworks/hermes.framework/hermes\
+       0x100fe4000 -        0x1012f3fff com.moltenvk.framework (1.4.1) <2560621a-3534-321d-9d64-ba778a764a0f> /Users/USER/Library/Developer/CoreSimulator/Devices/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2/data/Containers/Bundle/Application/56363588-77F4-40C3-AF67-22C2C57FC63B/GodotRNApp.app/Frameworks/MoltenVK.framework/MoltenVK\
+       0x100cb4000 -        0x100cbbfff libsystem_platform.dylib (*) <af547fd5-445c-3167-911e-194532cf1f08> /usr/lib/system/libsystem_platform.dylib\
+       0x100da4000 -        0x100ddffff libsystem_kernel.dylib (*) <545f62d1-ac22-3ce8-a7d6-53b08a143e8e> /usr/lib/system/libsystem_kernel.dylib\
+       0x100c50000 -        0x100c5ffff libsystem_pthread.dylib (*) <24a6e967-2095-367a-a315-dcdf05eef42e> /usr/lib/system/libsystem_pthread.dylib\
+       0x101d34000 -        0x101d3ffff libobjc-trampolines.dylib (*) <f766081e-2450-3187-beb3-a18b5d825986> /Volumes/VOLUME/*/libobjc-trampolines.dylib\
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???\
+       0x1801bf000 -        0x1802041bf libdispatch.dylib (*) <da1dd2f7-9f16-387c-9c54-fe18cccb12d9> /Volumes/VOLUME/*/libdispatch.dylib\
+       0x1803c3000 -        0x1807df37f com.apple.CoreFoundation (6.9) <1ce7a90d-1134-3bfe-b564-88755edd6c85> /Volumes/VOLUME/*/CoreFoundation.framework/CoreFoundation\
+       0x1926bc000 -        0x1926c3dbf com.apple.GraphicsServices (1.0) <4150c740-636d-3fba-a5f1-3e1483221156> /Volumes/VOLUME/*/GraphicsServices.framework/GraphicsServices\
+       0x18516f000 -        0x1873836bf com.apple.UIKitCore (1.0) <55f9ab77-06fb-3839-9083-ddbf2b2608be> /Volumes/VOLUME/*/UIKitCore.framework/UIKitCore\
+       0x18013e000 -        0x180140da8 libsystem_blocks.dylib (*) <150cce2c-0e1c-35b3-b98c-f647b834718c> /Volumes/VOLUME/*/libsystem_blocks.dylib\
+       0x18085f000 -        0x1815aad7f com.apple.Foundation (6.9) <249188a3-8f44-3d76-acb0-0345a43eb0a3> /Volumes/VOLUME/*/Foundation.framework/Foundation\
+       0x22f3a9000 -        0x22f3b42df com.apple.FramePacing (1.0) <be51cfdf-334e-3b9e-a715-ff45e09f9cb4> /Volumes/VOLUME/*/FramePacing.framework/FramePacing\
+       0x180314000 -        0x18039d4df libc++.1.dylib (*) <a7d32f85-302a-33da-a8c5-5b94a8e2c838> /Volumes/VOLUME/*/libc++.1.dylib\
+       0x184c9d000 -        0x18500f13f com.apple.CFNetwork (1.0) <e8f01728-c4af-3b4f-b340-af39876bf31d> /Volumes/VOLUME/*/CFNetwork.framework/CFNetwork\
+\
+External Modification Summary:\
+  Calls made by other processes targeting this process:\
+    task_for_pid: 0\
+    thread_create: 0\
+    thread_set_state: 0\
+  Calls made by this process:\
+    task_for_pid: 0\
+    thread_create: 0\
+    thread_set_state: 0\
+  Calls made by all processes on this machine:\
+    task_for_pid: 0\
+    thread_create: 0\
+    thread_set_state: 0\
+\
+VM Region Summary:\
+ReadOnly portion of Libraries: Total=1.9G resident=0K(0%) swapped_out_or_unallocated=1.9G(100%)\
+Writable regions: Total=722.3M written=1955K(0%) resident=1955K(0%) swapped_out=0K(0%) unallocated=720.4M(100%)\
+\
+                                VIRTUAL   REGION \
+REGION TYPE                        SIZE    COUNT (non-coalesced) \
+===========                     =======  ======= \
+Activity Tracing                   256K        1 \
+CoreAnimation                       80K        3 \
+Foundation                          16K        1 \
+IOSurface                         1408K        1 \
+Kernel Alloc Once                   32K        1 \
+MALLOC                           678.5M       98 \
+MALLOC guard page                  128K        8 \
+SQLite page cache                  256K        2 \
+STACK GUARD                       56.2M       15 \
+Stack                             15.9M       15 \
+VM_ALLOCATE                       22.2M       19 \
+__DATA                            47.8M      862 \
+__DATA_CONST                     111.7M      889 \
+__DATA_DIRTY                       139K       13 \
+__FONT_DATA                        2352        1 \
+__LINKEDIT                       759.9M       10 \
+__OBJC_RO                         62.6M        1 \
+__OBJC_RW                         2773K        1 \
+__TEXT                             1.1G      903 \
+__TPRO_CONST                       148K        2 \
+dyld private memory                2.2G       18 \
+mapped file                       51.8M       18 \
+page table in kernel              1955K        1 \
+shared memory                       16K        1 \
+===========                     =======  ======= \
+TOTAL                              5.1G     2884 \
+\
+\
+-----------\
+Full Report\
+-----------\
+\
+\{"app_name":"GodotRNApp","timestamp":"2026-01-02 20:27:25.00 -0500","app_version":"1.0.0","slice_uuid":"c1d0639d-f0e8-3c68-bd8c-bdf6e58344e0","build_version":"1","platform":7,"bundleID":"com.coolstring1.GodotRNApp","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 26.1 (25B78)","roots_installed":0,"name":"GodotRNApp","incident_id":"10C421FD-7CF4-4450-BD09-347747BAEB7D"\}\
+\{\
+  "uptime" : 310000,\
+  "procRole" : "Foreground",\
+  "version" : 2,\
+  "userID" : 501,\
+  "deployVersion" : 210,\
+  "modelCode" : "Mac16,12",\
+  "coalitionID" : 19410,\
+  "osVersion" : \{\
+    "train" : "macOS 26.1",\
+    "build" : "25B78",\
+    "releaseType" : "User"\
+  \},\
+  "captureTime" : "2026-01-02 20:27:15.9962 -0500",\
+  "codeSigningMonitor" : 2,\
+  "incident" : "10C421FD-7CF4-4450-BD09-347747BAEB7D",\
+  "pid" : 90337,\
+  "translated" : false,\
+  "cpuType" : "ARM-64",\
+  "roots_installed" : 0,\
+  "bug_type" : "309",\
+  "procLaunch" : "2026-01-02 20:26:48.2406 -0500",\
+  "procStartAbsTime" : 7662563117324,\
+  "procExitAbsTime" : 7663228503255,\
+  "procName" : "GodotRNApp",\
+  "procPath" : "\\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/GodotRNApp",\
+  "bundleInfo" : \{"CFBundleShortVersionString":"1.0.0","CFBundleVersion":"1","CFBundleIdentifier":"com.coolstring1.GodotRNApp"\},\
+  "storeInfo" : \{"deviceIdentifierForVendor":"ECA9BE09-9F12-5211-97C9-37F44A0E0A6B","thirdParty":true\},\
+  "parentProc" : "launchd_sim",\
+  "parentPid" : 79206,\
+  "coalitionName" : "com.apple.CoreSimulator.SimDevice.E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2",\
+  "crashReporterKey" : "57CF16AC-2A7F-DD50-E2F4-A5DD238E089D",\
+  "appleIntelligenceStatus" : \{"state":"available"\},\
+  "developerMode" : 1,\
+  "responsiblePid" : 78487,\
+  "responsibleProc" : "SimulatorTrampoline",\
+  "codeSigningID" : "com.coolstring1.GodotRNApp",\
+  "codeSigningTeamID" : "",\
+  "codeSigningFlags" : 570425857,\
+  "codeSigningValidationCategory" : 10,\
+  "codeSigningTrustLevel" : 4294967295,\
+  "codeSigningAuxiliaryInfo" : 0,\
+  "bootSessionUUID" : "A73B9A52-7C51-4CE5-8C46-2CCC13BA7B33",\
+  "wakeTime" : 6510,\
+  "sleepWakeUUID" : "D17AEEF5-9F47-4179-A29F-A4FDDD3CB209",\
+  "sip" : "enabled",\
+  "vmRegionInfo" : "0 is not in any region.  Bytes before following region: 4307779584\\n      REGION TYPE                    START - END         [ VSIZE] PRT\\/MAX SHRMOD  REGION DETAIL\\n      UNUSED SPACE AT START\\n--->  \\n      __TEXT                      100c38000-100c3c000    [   16K] r-x\\/r-x SM=COW  \\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/GodotRNApp",\
+  "exception" : \{"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000000"\},\
+  "termination" : \{"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":90337\},\
+  "vmregioninfo" : "0 is not in any region.  Bytes before following region: 4307779584\\n      REGION TYPE                    START - END         [ VSIZE] PRT\\/MAX SHRMOD  REGION DETAIL\\n      UNUSED SPACE AT START\\n--->  \\n      __TEXT                      100c38000-100c3c000    [   16K] r-x\\/r-x SM=COW  \\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/GodotRNApp",\
+  "extMods" : \{"caller":\{"thread_create":0,"thread_set_state":0,"task_for_pid":0\},"system":\{"thread_create":0,"thread_set_state":0,"task_for_pid":0\},"targeted":\{"thread_create":0,"thread_set_state":0,"task_for_pid":0\},"warnings":0\},\
+  "faultingThread" : 0,\
+  "threads" : [\{"triggered":true,"id":8842051,"threadState":\{"x":[\{"value":4492841072,"symbolLocation":0,"symbol":"godot::RenderingNativeSurfaceApple::get_class_static()::string_name"\},\{"value":4487400729\},\{"value":0\},\{"value":1\},\{"value":9\},\{"value":0\},\{"value":80\},\{"value":1027\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":8369191720,"symbolLocation":0,"symbol":"_NSConcreteStackBlock"\},\{"value":8369191720,"symbolLocation":0,"symbol":"_NSConcreteStackBlock"\},\{"value":4307883800,"symbolLocation":0,"symbol":"pthread_mutex_unlock"\},\{"value":6443756324,"symbolLocation":0,"symbol":"-[__NSStackBlock__ release]"\},\{"value":0\},\{"value":4492841072,"symbolLocation":0,"symbol":"godot::RenderingNativeSurfaceApple::get_class_static()::string_name"\},\{"value":4493832192,"symbolLocation":1112,"symbol":"kLinearToGammaTabS"\},\{"value":0\},\{"value":105553156161728\},\{"value":8369184960,"symbolLocation":0,"symbol":"_dispatch_main_q"\},\{"value":8369184960,"symbolLocation":0,"symbol":"_dispatch_main_q"\},\{"value":105553176972544\},\{"value":4493832192,"symbolLocation":1112,"symbol":"kLinearToGammaTabS"\},\{"value":0\},\{"value":276\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4443624716\},"cpsr":\{"value":1610614784\},"fp":\{"value":6159092160\},"sp":\{"value":6159092144\},"esr":\{"value":2181038086,"description":"(Instruction Abort) Translation fault"\},"pc":\{"value":0\},"far":\{"value":0\}\},"queue":"com.apple.main-thread","frames":[\{"imageOffset":0,"imageIndex":9\},\{"imageOffset":15657940,"symbol":"godot::RenderingNativeSurfaceApple::get_class_static()","symbolLocation":88,"imageIndex":2\},\{"imageOffset":15742148,"symbol":"godot::RenderingNativeSurfaceApple::create(unsigned long long)","symbolLocation":184,"imageIndex":2\},\{"imageOffset":15643104,"symbol":"GetGodotInstance()","symbolLocation":632,"imageIndex":2\},\{"imageOffset":15662116,"symbol":"__41-[GodotManager initWithBridge:jsInvoker:]_block_invoke","symbolLocation":44,"imageIndex":2\},\{"imageOffset":1134000,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<void () block_pointer __strong&>()()) std::__1::__invoke[abi:de200100]<void () block_pointer __strong&>(&&, decltype(std::declval<void () block_pointer __strong&>()())&&...)","imageIndex":2,"symbolLocation":32\},\{"imageOffset":1133648,"sourceLine":809,"sourceFile":"function.h","symbol":"std::__1::__function::__func<void () block_pointer __strong, std::__1::allocator<std::__1::allocator>, void ()>::operator()()","imageIndex":2,"symbolLocation":28\},\{"imageOffset":6056,"symbol":"_dispatch_call_block_and_release","symbolLocation":24,"imageIndex":10\},\{"imageOffset":115888,"symbol":"_dispatch_client_callout","symbolLocation":12,"imageIndex":10\},\{"imageOffset":230560,"symbol":"<deduplicated_symbol>","symbolLocation":24,"imageIndex":10\},\{"imageOffset":70428,"symbol":"_dispatch_main_queue_drain","symbolLocation":1184,"imageIndex":10\},\{"imageOffset":69228,"symbol":"_dispatch_main_queue_callback_4CF","symbolLocation":40,"imageIndex":10\},\{"imageOffset":601816,"symbol":"__CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__","symbolLocation":12,"imageIndex":11\},\{"imageOffset":598192,"symbol":"__CFRunLoopRun","symbolLocation":1884,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":10684,"symbol":"GSEventRunModal","symbolLocation":116,"imageIndex":12\},\{"imageOffset":18481368,"symbol":"-[UIApplication _run]","symbolLocation":772,"imageIndex":13\},\{"imageOffset":18498304,"symbol":"UIApplicationMain","symbolLocation":124,"imageIndex":13\},\{"imageOffset":20040,"sourceLine":6,"sourceFile":"AppDelegate.swift","symbol":"__debug_main_executable_dylib_entry_point","imageIndex":2,"symbolLocation":64\},\{"imageOffset":4308505552,"imageIndex":9\},\{"imageOffset":36180,"symbol":"start","symbolLocation":7184,"imageIndex":0\}]\},\{"id":8842121,"frames":[],"threadState":\{"x":[\{"value":6159659008\},\{"value":5123\},\{"value":6159122432\},\{"value":0\},\{"value":409604\},\{"value":18446744073709551615\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":0\},"cpsr":\{"value":0\},"fp":\{"value":0\},"sp":\{"value":6159659008\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4307884420\},"far":\{"value":0\}\}\},\{"id":8842124,"frames":[],"threadState":\{"x":[\{"value":6160232448\},\{"value":4883\},\{"value":6159695872\},\{"value":0\},\{"value":409604\},\{"value":18446744073709551615\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":0\},"cpsr":\{"value":0\},"fp":\{"value":0\},"sp":\{"value":6160232448\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4307884420\},"far":\{"value":0\}\}\},\{"id":8842134,"threadState":\{"x":[\{"value":8369380432,"symbolLocation":0,"symbol":"OBJC_CLASS_$_NSUserDefaults"\},\{"value":8514327505,"objc-selector":"standardUserDefaults"\},\{"value":4355\},\{"value":4355\},\{"value":8369225104,"symbolLocation":0,"symbol":"_os_log_current_test_callback"\},\{"value":62\},\{"value":0\},\{"value":0\},\{"value":10097131520\},\{"value":8514327505,"objc-selector":"standardUserDefaults"\},\{"value":105553118512480\},\{"value":1\},\{"value":1\},\{"value":105553118512480\},\{"value":8369380392,"symbolLocation":0,"symbol":"OBJC_METACLASS_$_NSUserDefaults"\},\{"value":8369380392,"symbolLocation":0,"symbol":"OBJC_METACLASS_$_NSUserDefaults"\},\{"value":8369380392,"symbolLocation":0,"symbol":"OBJC_METACLASS_$_NSUserDefaults"\},\{"value":6460410496,"symbolLocation":0,"symbol":"+[NSUserDefaults(NSUserDefaults) standardUserDefaults]"\},\{"value":0\},\{"value":17216892719917625070\},\{"value":105553140470144\},\{"value":276\},\{"value":4351\},\{"value":10097131520\},\{"value":2215591936\},\{"value":105553140854080\},\{"value":0\},\{"value":0\},\{"value":196610\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":9382310032\},"cpsr":\{"value":1610613760\},"fp":\{"value":6160803936\},"sp":\{"value":6160803840\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":6460410496\},"far":\{"value":0\}\},"queue":"com.apple.FramePacing.ConfigurationCheckingQueue","frames":[\{"imageOffset":9181824,"symbol":"+[NSUserDefaults(NSUserDefaults) standardUserDefaults]","symbolLocation":0,"imageIndex":15\},\{"imageOffset":8336,"symbol":"___FPCheckEnvironmentVariablesAndDefaultsForConfiguration_block_invoke","symbolLocation":288,"imageIndex":16\},\{"imageOffset":6056,"symbol":"_dispatch_call_block_and_release","symbolLocation":24,"imageIndex":10\},\{"imageOffset":115888,"symbol":"_dispatch_client_callout","symbolLocation":12,"imageIndex":10\},\{"imageOffset":44072,"symbol":"_dispatch_lane_serial_drain","symbolLocation":984,"imageIndex":10\},\{"imageOffset":46824,"symbol":"_dispatch_lane_invoke","symbolLocation":396,"imageIndex":10\},\{"imageOffset":91444,"symbol":"_dispatch_root_queue_drain_deferred_wlh","symbolLocation":288,"imageIndex":10\},\{"imageOffset":89204,"symbol":"_dispatch_workloop_worker_thread","symbolLocation":692,"imageIndex":10\},\{"imageOffset":11148,"symbol":"_pthread_wqthread","symbolLocation":288,"imageIndex":7\},\{"imageOffset":6540,"symbol":"start_wqthread","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842136,"name":"com.apple.uikit.eventfetch-thread","threadState":\{"x":[\{"value":268451845\},\{"value":21592279046\},\{"value":8589934592\},\{"value":68182605824000\},\{"value":2162692\},\{"value":68182605824000\},\{"value":2\},\{"value":4294967295\},\{"value":0\},\{"value":17179869184\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":15875\},\{"value":3072\},\{"value":18446744073709551569\},\{"value":77\},\{"value":0\},\{"value":4294967295\},\{"value":2\},\{"value":68182605824000\},\{"value":2162692\},\{"value":68182605824000\},\{"value":6161948040\},\{"value":8589934592\},\{"value":21592279046\},\{"value":18446744073709550527\},\{"value":4412409862\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4309342476\},"cpsr":\{"value":0\},"fp":\{"value":6161947888\},"sp":\{"value":6161947808\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309273456\},"far":\{"value":0\}\},"frames":[\{"imageOffset":2928,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":6\},\{"imageOffset":71948,"symbol":"mach_msg2_internal","symbolLocation":72,"imageIndex":6\},\{"imageOffset":35856,"symbol":"mach_msg_overwrite","symbolLocation":480,"imageIndex":6\},\{"imageOffset":3812,"symbol":"mach_msg","symbolLocation":20,"imageIndex":6\},\{"imageOffset":601092,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":156,"imageIndex":11\},\{"imageOffset":597436,"symbol":"__CFRunLoopRun","symbolLocation":1128,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":8938504,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":208,"imageIndex":15\},\{"imageOffset":8939048,"symbol":"-[NSRunLoop(NSRunLoop) runUntilDate:]","symbolLocation":60,"imageIndex":15\},\{"imageOffset":15697552,"symbol":"-[UIEventFetcher threadMain]","symbolLocation":392,"imageIndex":13\},\{"imageOffset":9097940,"symbol":"__NSThread__start__","symbolLocation":716,"imageIndex":15\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842143,"frames":[],"threadState":\{"x":[\{"value":6162526208\},\{"value":20739\},\{"value":6161989632\},\{"value":0\},\{"value":409604\},\{"value":18446744073709551615\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":0\},"cpsr":\{"value":0\},"fp":\{"value":0\},"sp":\{"value":6162526208\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4307884420\},"far":\{"value":0\}\}\},\{"id":8842145,"frames":[],"threadState":\{"x":[\{"value":6163099648\},\{"value":17923\},\{"value":6162563072\},\{"value":0\},\{"value":409604\},\{"value":18446744073709551615\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":0\},"cpsr":\{"value":0\},"fp":\{"value":0\},"sp":\{"value":6163099648\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4307884420\},"far":\{"value":0\}\}\},\{"id":8842157,"name":"com.facebook.react.JavaScript","threadState":\{"x":[\{"value":4327863376\},\{"value":105553166836304\},\{"value":0\},\{"value":1\},\{"value":105553162908928\},\{"value":0\},\{"value":105553181804288\},\{"value":82\},\{"value":6164183600\},\{"value":0\},\{"value":4320862276,"symbolLocation":156,"symbol":"hermes::hbc::HBCISel::generateHBCLoadConstInst(hermes::HBCLoadConstInst*, hermes::BasicBlock*)"\},\{"value":7\},\{"value":0\},\{"value":18446744073709551600\},\{"value":105553166821376\},\{"value":3\},\{"value":3\},\{"value":106\},\{"value":0\},\{"value":105553166836304\},\{"value":6164178744\},\{"value":0\},\{"value":105553166904576\},\{"value":105553166836304\},\{"value":0\},\{"value":6164178128\},\{"value":105553151596536\},\{"value":6164178128\},\{"value":6164179184\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4320901244\},"cpsr":\{"value":2147483648\},"fp":\{"value":6164177904\},"sp":\{"value":6164177856\},"esr":\{"value":2449473607,"description":"(Data Abort) byte write Translation fault"\},"pc":\{"value":4321295876\},"far":\{"value":0\}\},"frames":[\{"imageOffset":2866692,"symbol":"hermes::Function::getContext() const","symbolLocation":4,"imageIndex":3\},\{"imageOffset":2472060,"symbol":"hermes::hbc::HBCISel::generate(hermes::Instruction*, hermes::BasicBlock*)","symbolLocation":40,"imageIndex":3\},\{"imageOffset":2471412,"symbol":"hermes::hbc::HBCISel::generate(hermes::BasicBlock*, hermes::BasicBlock*)","symbolLocation":620,"imageIndex":3\},\{"imageOffset":2475648,"symbol":"hermes::hbc::HBCISel::generate(hermes::SourceMapGenerator*)","symbolLocation":1392,"imageIndex":3\},\{"imageOffset":2219960,"symbol":"hermes::hbc::generateBytecodeModule(hermes::Module*, hermes::Function*, hermes::Function*, hermes::BytecodeGenerationOptions const&, hermes::OptValue<unsigned int>, hermes::SourceMapGenerator*, std::__1::unique_ptr<hermes::hbc::BCProviderBase, std::__1::default_delete<hermes::hbc::BCProviderBase>>)","symbolLocation":16272,"imageIndex":3\},\{"imageOffset":857244,"symbol":"hermes::vm::CodeBlock::lazyCompileImpl(hermes::vm::Runtime&)","symbolLocation":232,"imageIndex":3\},\{"imageOffset":958104,"symbol":"hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&)","symbolLocation":2500,"imageIndex":3\},\{"imageOffset":955552,"symbol":"hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*)","symbolLocation":132,"imageIndex":3\},\{"imageOffset":851500,"symbol":"hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&)","symbolLocation":40,"imageIndex":3\},\{"imageOffset":841772,"symbol":"hermes::vm::Callable::executeCall0(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, bool)","symbolLocation":176,"imageIndex":3\},\{"imageOffset":1049240,"symbol":"hermes::vm::JSObject::getComputedWithReceiver_RJS(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>)","symbolLocation":612,"imageIndex":3\},\{"imageOffset":965628,"symbol":"hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&)","symbolLocation":10024,"imageIndex":3\},\{"imageOffset":955552,"symbol":"hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*)","symbolLocation":132,"imageIndex":3\},\{"imageOffset":851500,"symbol":"hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&)","symbolLocation":40,"imageIndex":3\},\{"imageOffset":849468,"symbol":"hermes::vm::BoundFunction::_boundCall(hermes::vm::BoundFunction*, hermes::inst::Inst const*, hermes::vm::Runtime&)","symbolLocation":504,"imageIndex":3\},\{"imageOffset":957952,"symbol":"hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&)","symbolLocation":2348,"imageIndex":3\},\{"imageOffset":955552,"symbol":"hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*)","symbolLocation":132,"imageIndex":3\},\{"imageOffset":851500,"symbol":"hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&)","symbolLocation":40,"imageIndex":3\},\{"imageOffset":844452,"symbol":"hermes::vm::Callable::executeCall(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::JSObject>)","symbolLocation":1344,"imageIndex":3\},\{"imageOffset":1628600,"symbol":"hermes::vm::functionPrototypeApply(void*, hermes::vm::Runtime&, hermes::vm::NativeArgs)","symbolLocation":320,"imageIndex":3\},\{"imageOffset":850776,"symbol":"hermes::vm::NativeFunction::_nativeCall(hermes::vm::NativeFunction*, hermes::vm::Runtime&)","symbolLocation":144,"imageIndex":3\},\{"imageOffset":957924,"symbol":"hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false, false>(hermes::vm::Runtime&, hermes::vm::InterpreterState&)","symbolLocation":2320,"imageIndex":3\},\{"imageOffset":955552,"symbol":"hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*)","symbolLocation":132,"imageIndex":3\},\{"imageOffset":851500,"symbol":"hermes::vm::JSFunction::_callImpl(hermes::vm::Handle<hermes::vm::Callable>, hermes::vm::Runtime&)","symbolLocation":40,"imageIndex":3\},\{"imageOffset":849468,"symbol":"hermes::vm::BoundFunction::_boundCall(hermes::vm::BoundFunction*, hermes::inst::Inst const*, hermes::vm::Runtime&)","symbolLocation":504,"imageIndex":3\},\{"imageOffset":45976,"symbol":"facebook::hermes::(anonymous namespace)::HermesRuntimeImpl::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)","symbolLocation":748,"imageIndex":3\},\{"imageOffset":3721976,"sourceLine":393,"sourceFile":"decorator.h","symbol":"facebook::jsi::RuntimeDecorator<facebook::jsi::Runtime, facebook::jsi::Runtime>::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)","imageIndex":2,"symbolLocation":76\},\{"imageOffset":12094816,"sourceLine":933,"sourceFile":"decorator.h","symbol":"facebook::jsi::WithRuntimeDecorator<facebook::react::(anonymous namespace)::ReentrancyCheck, facebook::jsi::Runtime, facebook::jsi::Runtime>::call(facebook::jsi::Function const&, facebook::jsi::Value const&, facebook::jsi::Value const*, unsigned long)","imageIndex":2,"symbolLocation":88\},\{"imageOffset":1050940,"sourceLine":282,"sourceFile":"jsi-inl.h","symbol":"facebook::jsi::Function::call(facebook::jsi::Runtime&, facebook::jsi::Value const*, unsigned long) const","imageIndex":2,"symbolLocation":100\},\{"imageOffset":1050764,"sourceLine":287,"sourceFile":"jsi-inl.h","symbol":"facebook::jsi::Function::call(facebook::jsi::Runtime&, std::initializer_list<facebook::jsi::Value>) const","imageIndex":2,"symbolLocation":112\},\{"imageOffset":12340236,"sourceLine":295,"sourceFile":"jsi-inl.h","symbol":"facebook::jsi::Value facebook::jsi::Function::call<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, facebook::jsi::Value>(facebook::jsi::Runtime&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, facebook::jsi::Value&&) const","imageIndex":2,"symbolLocation":224\},\{"imageOffset":12339928,"sourceLine":241,"sourceFile":"JSIExecutor.cpp","symbol":"facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0::operator()() const","imageIndex":2,"symbolLocation":140\},\{"imageOffset":12339776,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":12339740,"sourceLine":251,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":12339704,"sourceLine":273,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_r[abi:de200100]<void, facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&>(facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":12339668,"sourceLine":167,"sourceFile":"function.h","symbol":"std::__1::__function::__alloc_func<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0, std::__1::allocator<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0>, void ()>::operator()[abi:de200100]()","imageIndex":2,"symbolLocation":24\},\{"imageOffset":12337948,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0, std::__1::allocator<facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)::$_0>, void ()>::operator()()","imageIndex":2,"symbolLocation":28\},\{"imageOffset":1174872,"sourceLine":436,"sourceFile":"function.h","symbol":"std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const","imageIndex":2,"symbolLocation":60\},\{"imageOffset":1174800,"sourceLine":995,"sourceFile":"function.h","symbol":"std::__1::function<void ()>::operator()() const","imageIndex":2,"symbolLocation":24\},\{"imageOffset":4878172,"sourceLine":108,"sourceFile":"JSIExecutor.h","symbol":"facebook::react::JSIExecutor::defaultTimeoutInvoker(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)","imageIndex":2,"symbolLocation":28\},\{"imageOffset":4882184,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>()(std::declval<std::__1::function<void ()> const&>(), std::declval<std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>())) std::__1::__invoke[abi:de200100]<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&)","imageIndex":2,"symbolLocation":92\},\{"imageOffset":4882080,"sourceLine":251,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&)","imageIndex":2,"symbolLocation":40\},\{"imageOffset":4882028,"sourceLine":273,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_r[abi:de200100]<void, void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>>(void (*&)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&)","imageIndex":2,"symbolLocation":40\},\{"imageOffset":4881976,"sourceLine":167,"sourceFile":"function.h","symbol":"std::__1::__function::__alloc_func<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::allocator<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>, void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()[abi:de200100](std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&)","imageIndex":2,"symbolLocation":40\},\{"imageOffset":4879960,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>), std::__1::allocator<void (*)(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>, void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&)","imageIndex":2,"symbolLocation":44\},\{"imageOffset":12335784,"sourceLine":436,"sourceFile":"function.h","symbol":"std::__1::__function::__value_func<void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()[abi:de200100](std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>&&) const","imageIndex":2,"symbolLocation":76\},\{"imageOffset":12297156,"sourceLine":995,"sourceFile":"function.h","symbol":"std::__1::function<void (std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>)>::operator()(std::__1::function<void ()> const&, std::__1::function<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> ()>) const","imageIndex":2,"symbolLocation":40\},\{"imageOffset":12296180,"sourceLine":239,"sourceFile":"JSIExecutor.cpp","symbol":"facebook::react::JSIExecutor::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, folly::dynamic const&)","imageIndex":2,"symbolLocation":316\},\{"imageOffset":11875020,"sourceLine":205,"sourceFile":"NativeToJsBridge.cpp","symbol":"facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0::operator()(facebook::react::JSExecutor*) const","imageIndex":2,"symbolLocation":636\},\{"imageOffset":11874372,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&>()(std::declval<facebook::react::JSExecutor*>())) std::__1::__invoke[abi:de200100]<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&)","imageIndex":2,"symbolLocation":36\},\{"imageOffset":11874324,"sourceLine":251,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&)","imageIndex":2,"symbolLocation":32\},\{"imageOffset":11874280,"sourceLine":273,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_r[abi:de200100]<void, facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*>(facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0&, facebook::react::JSExecutor*&&)","imageIndex":2,"symbolLocation":32\},\{"imageOffset":11874236,"sourceLine":167,"sourceFile":"function.h","symbol":"std::__1::__function::__alloc_func<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0>, void (facebook::react::JSExecutor*)>::operator()[abi:de200100](facebook::react::JSExecutor*&&)","imageIndex":2,"symbolLocation":32\},\{"imageOffset":11871800,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::callFunction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&&, folly::dynamic&&)::$_0>, void (facebook::react::JSExecutor*)>::operator()(facebook::react::JSExecutor*&&)","imageIndex":2,"symbolLocation":36\},\{"imageOffset":11902548,"sourceLine":436,"sourceFile":"function.h","symbol":"std::__1::__function::__value_func<void (facebook::react::JSExecutor*)>::operator()[abi:de200100](facebook::react::JSExecutor*&&) const","imageIndex":2,"symbolLocation":68\},\{"imageOffset":11902444,"sourceLine":995,"sourceFile":"function.h","symbol":"std::__1::function<void (facebook::react::JSExecutor*)>::operator()(facebook::react::JSExecutor*) const","imageIndex":2,"symbolLocation":36\},\{"imageOffset":11902392,"sourceLine":306,"sourceFile":"NativeToJsBridge.cpp","symbol":"facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0::operator()() const","imageIndex":2,"symbolLocation":92\},\{"imageOffset":11902288,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":11902252,"sourceLine":251,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":11902216,"sourceLine":273,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_r[abi:de200100]<void, facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&>(facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":11902180,"sourceLine":167,"sourceFile":"function.h","symbol":"std::__1::__function::__alloc_func<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0>, void ()>::operator()[abi:de200100]()","imageIndex":2,"symbolLocation":24\},\{"imageOffset":11899560,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0, std::__1::allocator<facebook::react::NativeToJsBridge::runOnExecutorQueue(std::__1::function<void (facebook::react::JSExecutor*)>&&)::$_0>, void ()>::operator()()","imageIndex":2,"symbolLocation":28\},\{"imageOffset":1174872,"sourceLine":436,"sourceFile":"function.h","symbol":"std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const","imageIndex":2,"symbolLocation":60\},\{"imageOffset":1174800,"sourceLine":995,"sourceFile":"function.h","symbol":"std::__1::function<void ()>::operator()() const","imageIndex":2,"symbolLocation":24\},\{"imageOffset":4945816,"sourceLine":76,"sourceFile":"RCTCxxUtils.mm","symbol":"facebook::react::tryAndReturnError(std::__1::function<void ()> const&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5105412,"sourceLine":68,"sourceFile":"RCTMessageThread.mm","symbol":"facebook::react::RCTMessageThread::tryFunc(std::__1::function<void ()> const&)","imageIndex":2,"symbolLocation":36\},\{"imageOffset":5119244,"sourceLine":81,"sourceFile":"RCTMessageThread.mm","symbol":"facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0::operator()() const","imageIndex":2,"symbolLocation":80\},\{"imageOffset":5119152,"sourceLine":179,"sourceFile":"invoke.h","symbol":"decltype(std::declval<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>()()) std::__1::__invoke[abi:de200100]<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5119116,"sourceLine":251,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_void_return_wrapper<void, true>::__call[abi:de200100]<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5119080,"sourceLine":273,"sourceFile":"invoke.h","symbol":"void std::__1::__invoke_r[abi:de200100]<void, facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&>(facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0&)","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5119044,"sourceLine":167,"sourceFile":"function.h","symbol":"std::__1::__function::__alloc_func<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0, std::__1::allocator<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0>, void ()>::operator()[abi:de200100]()","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5116796,"sourceLine":319,"sourceFile":"function.h","symbol":"std::__1::__function::__func<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0, std::__1::allocator<facebook::react::RCTMessageThread::runOnQueue(std::__1::function<void ()>&&)::$_0>, void ()>::operator()()","imageIndex":2,"symbolLocation":28\},\{"imageOffset":1174872,"sourceLine":436,"sourceFile":"function.h","symbol":"std::__1::__function::__value_func<void ()>::operator()[abi:de200100]() const","imageIndex":2,"symbolLocation":60\},\{"imageOffset":1174800,"sourceLine":995,"sourceFile":"function.h","symbol":"std::__1::function<void ()>::operator()() const","imageIndex":2,"symbolLocation":24\},\{"imageOffset":5104804,"sourceLine":44,"sourceFile":"RCTMessageThread.mm","symbol":"invocation function for block in facebook::react::RCTMessageThread::runAsync(std::__1::function<void ()>)","imageIndex":2,"symbolLocation":48\},\{"imageOffset":602480,"symbol":"__CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__","symbolLocation":20,"imageIndex":11\},\{"imageOffset":600312,"symbol":"__CFRunLoopDoBlocks","symbolLocation":340,"imageIndex":11\},\{"imageOffset":597052,"symbol":"__CFRunLoopRun","symbolLocation":744,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":4798732,"sourceLine":378,"sourceFile":"RCTCxxBridge.mm","symbol":"+[RCTCxxBridge runRunLoop]","imageIndex":2,"symbolLocation":772\},\{"imageOffset":9097940,"symbol":"__NSThread__start__","symbolLocation":716,"imageIndex":15\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842158,"name":"hades","threadState":\{"x":[\{"value":260\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":160\},\{"value":0\},\{"value":0\},\{"value":6164770472\},\{"value":0\},\{"value":0\},\{"value":2\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":305\},\{"value":0\},\{"value":0\},\{"value":105553171842784\},\{"value":105553171842848\},\{"value":6164771040\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":1\},\{"value":256\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4307905140\},"cpsr":\{"value":1610612736\},"fp":\{"value":6164770592\},"sp":\{"value":6164770448\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309286944\},"far":\{"value":0\}\},"frames":[\{"imageOffset":16416,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":6\},\{"imageOffset":27252,"symbol":"_pthread_cond_wait","symbolLocation":976,"imageIndex":7\},\{"imageOffset":136972,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":17\},\{"imageOffset":1781980,"symbol":"hermes::vm::HadesGC::Executor::worker()","symbolLocation":112,"imageIndex":3\},\{"imageOffset":1781824,"symbol":"void* std::__1::__thread_proxy[abi:nn180100]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, hermes::vm::HadesGC::Executor::Executor()::'lambda'()>>(void*)","symbolLocation":44,"imageIndex":3\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842159,"name":"com.apple.CFStream.LegacyThread","threadState":\{"x":[\{"value":268451845\},\{"value":21592279046\},\{"value":8589934592\},\{"value":126456722096128\},\{"value":0\},\{"value":126456722096128\},\{"value":2\},\{"value":4294967295\},\{"value":0\},\{"value":17179869184\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":29443\},\{"value":3072\},\{"value":18446744073709551569\},\{"value":27487790700802\},\{"value":0\},\{"value":4294967295\},\{"value":2\},\{"value":126456722096128\},\{"value":0\},\{"value":126456722096128\},\{"value":6165340168\},\{"value":8589934592\},\{"value":21592279046\},\{"value":18446744073709550527\},\{"value":4412409862\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4309342476\},"cpsr":\{"value":0\},"fp":\{"value":6165340016\},"sp":\{"value":6165339936\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309273456\},"far":\{"value":0\}\},"frames":[\{"imageOffset":2928,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":6\},\{"imageOffset":71948,"symbol":"mach_msg2_internal","symbolLocation":72,"imageIndex":6\},\{"imageOffset":35856,"symbol":"mach_msg_overwrite","symbolLocation":480,"imageIndex":6\},\{"imageOffset":3812,"symbol":"mach_msg","symbolLocation":20,"imageIndex":6\},\{"imageOffset":601092,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":156,"imageIndex":11\},\{"imageOffset":597436,"symbol":"__CFRunLoopRun","symbolLocation":1128,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":725380,"symbol":"_legacyStreamRunLoop_workThread","symbolLocation":260,"imageIndex":11\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842160,"frames":[],"threadState":\{"x":[\{"value":6165917696\},\{"value":0\},\{"value":6165381120\},\{"value":0\},\{"value":278532\},\{"value":18446744073709551615\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":0\},"cpsr":\{"value":0\},"fp":\{"value":0\},"sp":\{"value":6165917696\},"esr":\{"value":0\},"pc":\{"value":4307884420\},"far":\{"value":0\}\}\},\{"id":8842708,"name":"com.facebook.SocketRocket.NetworkThread","threadState":\{"x":[\{"value":268451845\},\{"value":21592279046\},\{"value":8589934592\},\{"value":99020471009280\},\{"value":0\},\{"value":99020471009280\},\{"value":2\},\{"value":4294967295\},\{"value":0\},\{"value":17179869184\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":23055\},\{"value":3072\},\{"value":18446744073709551569\},\{"value":2\},\{"value":0\},\{"value":4294967295\},\{"value":2\},\{"value":99020471009280\},\{"value":0\},\{"value":99020471009280\},\{"value":6161374552\},\{"value":8589934592\},\{"value":21592279046\},\{"value":18446744073709550527\},\{"value":4412409862\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4309342476\},"cpsr":\{"value":0\},"fp":\{"value":6161374400\},"sp":\{"value":6161374320\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309273456\},"far":\{"value":0\}\},"frames":[\{"imageOffset":2928,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":6\},\{"imageOffset":71948,"symbol":"mach_msg2_internal","symbolLocation":72,"imageIndex":6\},\{"imageOffset":35856,"symbol":"mach_msg_overwrite","symbolLocation":480,"imageIndex":6\},\{"imageOffset":3812,"symbol":"mach_msg","symbolLocation":20,"imageIndex":6\},\{"imageOffset":601092,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":156,"imageIndex":11\},\{"imageOffset":597436,"symbol":"__CFRunLoopRun","symbolLocation":1128,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":8938504,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":208,"imageIndex":15\},\{"imageOffset":13869240,"sourceLine":71,"sourceFile":"SRRunLoopThread.m","symbol":"-[SRRunLoopThread main]","imageIndex":2,"symbolLocation":268\},\{"imageOffset":9097940,"symbol":"__NSThread__start__","symbolLocation":716,"imageIndex":15\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842709,"name":"com.apple.NSURLConnectionLoader","threadState":\{"x":[\{"value":268451845\},\{"value":21592279046\},\{"value":8589934592\},\{"value":176037824561152\},\{"value":0\},\{"value":176037824561152\},\{"value":2\},\{"value":4294967295\},\{"value":0\},\{"value":17179869184\},\{"value":0\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":40987\},\{"value":3072\},\{"value":18446744073709551569\},\{"value":3185668178\},\{"value":0\},\{"value":4294967295\},\{"value":2\},\{"value":176037824561152\},\{"value":0\},\{"value":176037824561152\},\{"value":6166486344\},\{"value":8589934592\},\{"value":21592279046\},\{"value":18446744073709550527\},\{"value":4412409862\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4309342476\},"cpsr":\{"value":0\},"fp":\{"value":6166486192\},"sp":\{"value":6166486112\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309273456\},"far":\{"value":0\}\},"frames":[\{"imageOffset":2928,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":6\},\{"imageOffset":71948,"symbol":"mach_msg2_internal","symbolLocation":72,"imageIndex":6\},\{"imageOffset":35856,"symbol":"mach_msg_overwrite","symbolLocation":480,"imageIndex":6\},\{"imageOffset":3812,"symbol":"mach_msg","symbolLocation":20,"imageIndex":6\},\{"imageOffset":601092,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":156,"imageIndex":11\},\{"imageOffset":597436,"symbol":"__CFRunLoopRun","symbolLocation":1128,"imageIndex":11\},\{"imageOffset":576748,"symbol":"_CFRunLoopRunSpecificWithOptions","symbolLocation":496,"imageIndex":11\},\{"imageOffset":2100336,"symbol":"+[__CFN_CoreSchedulingSetRunnable _run:]","symbolLocation":368,"imageIndex":18\},\{"imageOffset":9097940,"symbol":"__NSThread__start__","symbolLocation":716,"imageIndex":15\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842710,"name":"com.apple.CFSocket.private","threadState":\{"x":[\{"value":4\},\{"value":0\},\{"value":105553116301600\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":6167064800\},\{"value":0\},\{"value":105553181529856\},\{"value":15\},\{"value":14\},\{"value":105553181530064\},\{"value":72057602407301289,"symbolLocation":72057594037927937,"symbol":"OBJC_CLASS_$___NSCFArray"\},\{"value":8369373352,"symbolLocation":0,"symbol":"OBJC_CLASS_$___NSCFArray"\},\{"value":93\},\{"value":6446906352,"symbolLocation":0,"symbol":"-[__NSCFArray objectAtIndex:]"\},\{"value":0\},\{"value":105553129168720\},\{"value":8369393664,"symbolLocation":48,"symbol":"cache"\},\{"value":32\},\{"value":8369396144,"symbolLocation":0,"symbol":"__CFActiveSocketsLock"\},\{"value":0\},\{"value":105553116301600\},\{"value":105553129066912\},\{"value":105553116303328\},\{"value":0\},\{"value":105553129073056\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":6447057068\},"cpsr":\{"value":1610612736\},"fp":\{"value":6167064512\},"sp":\{"value":6167030736\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309315456\},"far":\{"value":0\}\},"frames":[\{"imageOffset":44928,"symbol":"__select","symbolLocation":8,"imageIndex":6\},\{"imageOffset":661676,"symbol":"__CFSocketManager","symbolLocation":680,"imageIndex":11\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\},\{"id":8842719,"name":"hades","threadState":\{"x":[\{"value":260\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":160\},\{"value":0\},\{"value":0\},\{"value":6167637672\},\{"value":0\},\{"value":0\},\{"value":2\},\{"value":2\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":305\},\{"value":0\},\{"value":0\},\{"value":105553172004864\},\{"value":105553172004928\},\{"value":6167638240\},\{"value":0\},\{"value":0\},\{"value":0\},\{"value":1\},\{"value":256\},\{"value":0\},\{"value":0\}],"flavor":"ARM_THREAD_STATE64","lr":\{"value":4307905140\},"cpsr":\{"value":1610612736\},"fp":\{"value":6167637792\},"sp":\{"value":6167637648\},"esr":\{"value":1442840704,"description":"(Syscall)"\},"pc":\{"value":4309286944\},"far":\{"value":0\}\},"frames":[\{"imageOffset":16416,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":6\},\{"imageOffset":27252,"symbol":"_pthread_cond_wait","symbolLocation":976,"imageIndex":7\},\{"imageOffset":136972,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":17\},\{"imageOffset":1781980,"symbol":"hermes::vm::HadesGC::Executor::worker()","symbolLocation":112,"imageIndex":3\},\{"imageOffset":1781824,"symbol":"void* std::__1::__thread_proxy[abi:nn180100]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, hermes::vm::HadesGC::Executor::Executor()::'lambda'()>>(void*)","symbolLocation":44,"imageIndex":3\},\{"imageOffset":26028,"symbol":"_pthread_start","symbolLocation":104,"imageIndex":7\},\{"imageOffset":6552,"symbol":"thread_start","symbolLocation":8,"imageIndex":7\}]\}],\
+  "usedImages" : [\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64e",\
+    "base" : 4310368256,\
+    "size" : 655360,\
+    "uuid" : "b50f5a1a-be81-3068-92e1-3554f2be478a",\
+    "path" : "\\/usr\\/lib\\/dyld",\
+    "name" : "dyld"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4307779584,\
+    "CFBundleShortVersionString" : "1.0.0",\
+    "CFBundleIdentifier" : "com.coolstring1.GodotRNApp",\
+    "size" : 16384,\
+    "uuid" : "c1d0639d-f0e8-3c68-bd8c-bdf6e58344e0",\
+    "path" : "\\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/GodotRNApp",\
+    "name" : "GodotRNApp",\
+    "CFBundleVersion" : "1"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4427825152,\
+    "size" : 62701568,\
+    "uuid" : "b7d8d1e4-90f4-35b1-b1c2-4bcdbe764bcd",\
+    "path" : "\\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/GodotRNApp.debug.dylib",\
+    "name" : "GodotRNApp.debug.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4318429184,\
+    "CFBundleShortVersionString" : "0.12.0",\
+    "CFBundleIdentifier" : "dev.hermesengine.iphonesimulator",\
+    "size" : 3702784,\
+    "uuid" : "944bd49b-ad2e-3e3c-96ac-0603909fdd97",\
+    "path" : "\\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/Frameworks\\/hermes.framework\\/hermes",\
+    "name" : "hermes",\
+    "CFBundleVersion" : "0.12.0"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4311629824,\
+    "CFBundleShortVersionString" : "1.4.1",\
+    "CFBundleIdentifier" : "com.moltenvk.framework",\
+    "size" : 3211264,\
+    "uuid" : "2560621a-3534-321d-9d64-ba778a764a0f",\
+    "path" : "\\/Users\\/USER\\/Library\\/Developer\\/CoreSimulator\\/Devices\\/E809B5D6-2A4A-433B-A6D0-D1CE3256C4A2\\/data\\/Containers\\/Bundle\\/Application\\/56363588-77F4-40C3-AF67-22C2C57FC63B\\/GodotRNApp.app\\/Frameworks\\/MoltenVK.framework\\/MoltenVK",\
+    "name" : "MoltenVK",\
+    "CFBundleVersion" : "1.4.1"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4308287488,\
+    "size" : 32768,\
+    "uuid" : "af547fd5-445c-3167-911e-194532cf1f08",\
+    "path" : "\\/usr\\/lib\\/system\\/libsystem_platform.dylib",\
+    "name" : "libsystem_platform.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4309270528,\
+    "size" : 245760,\
+    "uuid" : "545f62d1-ac22-3ce8-a7d6-53b08a143e8e",\
+    "path" : "\\/usr\\/lib\\/system\\/libsystem_kernel.dylib",\
+    "name" : "libsystem_kernel.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4307877888,\
+    "size" : 65536,\
+    "uuid" : "24a6e967-2095-367a-a315-dcdf05eef42e",\
+    "path" : "\\/usr\\/lib\\/system\\/libsystem_pthread.dylib",\
+    "name" : "libsystem_pthread.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 4325588992,\
+    "size" : 49152,\
+    "uuid" : "f766081e-2450-3187-beb3-a18b5d825986",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/libobjc-trampolines.dylib",\
+    "name" : "libobjc-trampolines.dylib"\
+  \},\
+  \{\
+    "size" : 0,\
+    "source" : "A",\
+    "base" : 0,\
+    "uuid" : "00000000-0000-0000-0000-000000000000"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6444281856,\
+    "size" : 283072,\
+    "uuid" : "da1dd2f7-9f16-387c-9c54-fe18cccb12d9",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/libdispatch.dylib",\
+    "name" : "libdispatch.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6446395392,\
+    "CFBundleShortVersionString" : "6.9",\
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",\
+    "size" : 4309888,\
+    "uuid" : "1ce7a90d-1134-3bfe-b564-88755edd6c85",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/CoreFoundation.framework\\/CoreFoundation",\
+    "name" : "CoreFoundation",\
+    "CFBundleVersion" : "4109.1.101"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6751502336,\
+    "CFBundleShortVersionString" : "1.0",\
+    "CFBundleIdentifier" : "com.apple.GraphicsServices",\
+    "size" : 32192,\
+    "uuid" : "4150c740-636d-3fba-a5f1-3e1483221156",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/GraphicsServices.framework\\/GraphicsServices",\
+    "name" : "GraphicsServices",\
+    "CFBundleVersion" : "1.0"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6527840256,\
+    "CFBundleShortVersionString" : "1.0",\
+    "CFBundleIdentifier" : "com.apple.UIKitCore",\
+    "size" : 35735232,\
+    "uuid" : "55f9ab77-06fb-3839-9083-ddbf2b2608be",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/UIKitCore.framework\\/UIKitCore",\
+    "name" : "UIKitCore",\
+    "CFBundleVersion" : "9126.1.12.1.112"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6443753472,\
+    "size" : 11689,\
+    "uuid" : "150cce2c-0e1c-35b3-b98c-f647b834718c",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/libsystem_blocks.dylib",\
+    "name" : "libsystem_blocks.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6451228672,\
+    "CFBundleShortVersionString" : "6.9",\
+    "CFBundleIdentifier" : "com.apple.Foundation",\
+    "size" : 13942144,\
+    "uuid" : "249188a3-8f44-3d76-acb0-0345a43eb0a3",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/Foundation.framework\\/Foundation",\
+    "name" : "Foundation",\
+    "CFBundleVersion" : "4109.1.101"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 9382301696,\
+    "CFBundleShortVersionString" : "1.0",\
+    "CFBundleIdentifier" : "com.apple.FramePacing",\
+    "size" : 45792,\
+    "uuid" : "be51cfdf-334e-3b9e-a715-ff45e09f9cb4",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/FramePacing.framework\\/FramePacing",\
+    "name" : "FramePacing",\
+    "CFBundleVersion" : "1"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6445678592,\
+    "size" : 562400,\
+    "uuid" : "a7d32f85-302a-33da-a8c5-5b94a8e2c838",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/libc++.1.dylib",\
+    "name" : "libc++.1.dylib"\
+  \},\
+  \{\
+    "source" : "P",\
+    "arch" : "arm64",\
+    "base" : 6522785792,\
+    "CFBundleShortVersionString" : "1.0",\
+    "CFBundleIdentifier" : "com.apple.CFNetwork",\
+    "size" : 3612992,\
+    "uuid" : "e8f01728-c4af-3b4f-b340-af39876bf31d",\
+    "path" : "\\/Volumes\\/VOLUME\\/*\\/CFNetwork.framework\\/CFNetwork",\
+    "name" : "CFNetwork",\
+    "CFBundleVersion" : "3860.200.71"\
+  \}\
+],\
+  "sharedCache" : \{\
+  "base" : 6442450944,\
+  "size" : 4245422080,\
+  "uuid" : "0136a6b9-a945-37d6-94d1-fed0f2b3c07e"\
+\},\
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.9G resident=0K(0%) swapped_out_or_unallocated=1.9G(100%)\\nWritable regions: Total=722.3M written=1955K(0%) resident=1955K(0%) swapped_out=0K(0%) unallocated=720.4M(100%)\\n\\n                                VIRTUAL   REGION \\nREGION TYPE                        SIZE    COUNT (non-coalesced) \\n===========                     =======  ======= \\nActivity Tracing                   256K        1 \\nCoreAnimation                       80K        3 \\nFoundation                          16K        1 \\nIOSurface                         1408K        1 \\nKernel Alloc Once                   32K        1 \\nMALLOC                           678.5M       98 \\nMALLOC guard page                  128K        8 \\nSQLite page cache                  256K        2 \\nSTACK GUARD                       56.2M       15 \\nStack                             15.9M       15 \\nVM_ALLOCATE                       22.2M       19 \\n__DATA                            47.8M      862 \\n__DATA_CONST                     111.7M      889 \\n__DATA_DIRTY                       139K       13 \\n__FONT_DATA                        2352        1 \\n__LINKEDIT                       759.9M       10 \\n__OBJC_RO                         62.6M        1 \\n__OBJC_RW                         2773K        1 \\n__TEXT                             1.1G      903 \\n__TPRO_CONST                       148K        2 \\ndyld private memory                2.2G       18 \\nmapped file                       51.8M       18 \\npage table in kernel              1955K        1 \\nshared memory                       16K        1 \\n===========                     =======  ======= \\nTOTAL                              5.1G     2884 \\n",\
+  "legacyInfo" : \{\
+  "threadTriggered" : \{\
+    "queue" : "com.apple.main-thread"\
+  \}\
+\},\
+  "logWritingSignature" : "eb1cab1853b664e525def35edce4a23080dc6844",\
+  "trialInfo" : \{\
+  "rollouts" : [\
+    \{\
+      "rolloutId" : "63f9578e238e7b23a1f3030a",\
+      "factorPackIds" : [\
+\
+      ],\
+      "deploymentId" : 240000005\
+    \},\
+    \{\
+      "rolloutId" : "6425c75e4327780c10cc4252",\
+      "factorPackIds" : [\
+        "642600a457e7664b1698eb32"\
+      ],\
+      "deploymentId" : 240000004\
+    \}\
+  ],\
+  "experiments" : [\
+\
+  ]\
+\}\
+\}\
+\
+Model: Mac16,12, BootROM 13822.41.1, proc 10:4:6 processors, 16 GB, SMC \
+Graphics: Apple M4, Apple M4, Built-In\
+Display: Color LCD, 2560 x 1664 Retina, Main, MirrorOff, Online\
+Memory Module: LPDDR5, Hynix\
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x4388), wl0: Oct  3 2025 00:48:50 version 23.41.7.0.41.51.200 FWID 01-8b09c4e0\
+IO80211_driverkit-1530.16 "IO80211_driverkit-1530.16" Oct 10 2025 22:56:35\
+AirPort: \
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports\
+Network Service: Wi-Fi, AirPort, en0\
+Thunderbolt Bus: MacBook Air, Apple Inc.\
+Thunderbolt Bus: MacBook Air, Apple Inc.\
+}

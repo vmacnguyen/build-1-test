@@ -116,6 +116,8 @@
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
+	<key>RCTNewArchEnabled</key>
+	<false/>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>
